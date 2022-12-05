@@ -1,11 +1,12 @@
-import { useCallback, useState } from "react";
-import Params from "./Params/Params";
-import { convertParamToQRString } from "./ParamsToString.util";
-import QRString from "./QRString/QRString";
-import { getParamsJSON } from "./stringToParamsUtils";
+import { useCallback, useState } from 'react';
+import Params from './Params/Params';
+import { convertParamToQRString } from './ParamsToString.util';
+import QR from './QRCode/QRCode';
+import QRString from './QRString/QRString';
+import { getParamsJSON } from './stringToParamsUtils';
 
 const BharatQR = () => {
-  const [qrString, setQrString] = useState("");
+  const [qrString, setQrString] = useState('');
   const [params, setParams] = useState({});
 
   const onQRStringChange = useCallback((textString) => {
@@ -19,18 +20,9 @@ const BharatQR = () => {
   }, []);
 
   return (
-    <div
-      style={{
-        width: "100%",
-        display: "flex",
-        padding: 32,
-        gap: 32,
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-      }}
-    >
+    <div className="container">
       <QRString qrString={qrString} onChange={onQRStringChange}></QRString>
+      <QR qrString={qrString} />
       <Params params={params} onChange={onParamChange} />
     </div>
   );

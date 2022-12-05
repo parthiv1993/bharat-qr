@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback } from 'react';
 
 const QRString = ({ qrString, onChange }) => {
   const onChangeHandler = useCallback(
@@ -14,14 +14,8 @@ const QRString = ({ qrString, onChange }) => {
   }, [qrString]);
   return (
     <>
-      <textarea
-        style={{ width: "90%", fonSize: "20px" }}
-        rows="10"
-        type="text"
-        value={qrString}
-        onChange={onChangeHandler}
-      ></textarea>
-      <button onClick={onCopy} type="button">
+      <textarea className="qrstring" rows="10" type="text" value={qrString} onChange={onChangeHandler}></textarea>
+      <button className="qrbutton" onClick={onCopy} type="button">
         Copy
       </button>
     </>

@@ -8,7 +8,7 @@ const Param = ({ paramCode, subParamCode, value, label, onChange }) => (
       <td>{subParamCode}</td>
       <td>{label}</td>
       <td>
-        <input style={{ fontSize: 20 }} type="text" value={value || ''} onChange={(ev) => onChange(ev.target.value)} />
+        <input style={{ fontSize: 24 }} type="text" value={value || ''} onChange={(ev) => onChange(ev.target.value)} />
       </td>
     </tr>
   </>
@@ -62,7 +62,7 @@ const Params = ({ params, onChange }) => {
 
   return (
     <>
-      <table>
+      <table className="table">
         <thead>
           <tr>
             <th>Tag Code</th>

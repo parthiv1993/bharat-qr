@@ -1,6 +1,5 @@
-import logo from "./logo.svg";
-import "./App.css";
-import BharatQR from "./BharatQR/BharatQR";
+import './App.css';
+import BharatQR from './BharatQR/BharatQR';
 
 function App() {
   return (
