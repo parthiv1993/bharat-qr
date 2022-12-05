@@ -15,7 +15,6 @@ const BharatQR = () => {
 
   const onParamChange = useCallback((param) => {
     setParams(param);
-    console.log(param);
     setQrString(convertParamToQRString(param));
   }, []);
 

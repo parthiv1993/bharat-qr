@@ -1,5 +1,5 @@
-import { useCallback } from "react";
-import { ParamsDetails } from "./Params.utils";
+import { useCallback } from 'react';
+import { ParamsDetails } from './Params.utils';
 
 const Param = ({ paramCode, subParamCode, value, label, onChange }) => (
   <>
@@ -8,12 +8,7 @@ const Param = ({ paramCode, subParamCode, value, label, onChange }) => (
       <td>{subParamCode}</td>
       <td>{label}</td>
       <td>
-        <input
-          style={{ fontSize: 20 }}
-          type="text"
-          value={value}
-          onChange={(ev) => onChange(ev.target.value)}
-        />
+        <input style={{ fontSize: 20 }} type="text" value={value || ''} onChange={(ev) => onChange(ev.target.value)} />
       </td>
     </tr>
   </>
@@ -42,7 +37,7 @@ const Params = ({ params, onChange }) => {
         return possibleSubTags.map((subTagObj) => {
           return (
             <Param
-              key={subTagObj.label}
+              key={`${paramsObj.code}-${subTagObj.code}`}
               paramCode={paramsObj.code}
               subParamCode={subTagObj.code}
               label={subTagObj.label}
@@ -54,7 +49,7 @@ const Params = ({ params, onChange }) => {
       } else {
         return (
           <Param
-            key={paramsObj.label}
+            key={paramsObj.code}
             paramCode={paramsObj.code}
             label={paramsObj.label}
             value={params[paramsObj.code]}
