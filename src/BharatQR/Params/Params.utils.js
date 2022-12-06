@@ -13,7 +13,18 @@ export const ParamsDetails = [
 
     subTags: [
       { code: '00', label: '00' },
-      { code: '01', label: 'payee vpa' },
+      {
+        code: '01',
+        label: 'payee vpa',
+        remarks: [
+          <div>
+            <p>
+              <b>Mandatory</b>
+            </p>
+            <p>eg: test@mybank</p>
+          </div>,
+        ],
+      },
       { code: '02', label: 'minimum amount' },
     ],
   },
