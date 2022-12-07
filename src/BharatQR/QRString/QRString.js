@@ -16,7 +16,7 @@ const QRString = ({ qrString, onChange }) => {
     <>
       <textarea className="qrstring" rows="10" type="text" value={qrString} onChange={onChangeHandler}></textarea>
       <button className="qrbutton" onClick={onCopy} type="button">
-        Copy
+        Copy QR String
       </button>
     </>
   );

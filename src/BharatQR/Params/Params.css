@@ -5,6 +5,8 @@
     gap: 24px;
     width: 100%;
     align-items: center;
+    overflow: scroll;
+    height: 100%;
 }
 
 .params-qr-table > p{
@@ -24,6 +26,7 @@ p{
 
 .params-qr-table > h2{
     font-size: 24px;
+    margin:0;
 }
 
 .info{

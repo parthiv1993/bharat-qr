@@ -1,18 +1,11 @@
+*{
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
 }
 
-
-.App-header {
-  background-color: #e3e3e3;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #444;
-}
 
 
 @keyframes App-logo-spin {
@@ -28,17 +21,32 @@ tr:nth-child(even) {
   background-color: #aaa;
 }
 
+button{
+  padding: 8px;
+  background: grey;
+  box-shadow: 0px 0px 5px 0px #aaa;
+  border: 0px;
+  border-radius: 4px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
 .container {
+  background-color: #e3e3e3;
+  height: 100vh;
   display: grid;
-  width:90%;
+  width:100%;
   padding: 32px;
   gap: 32px;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  grid-template-areas: "qrstring qr-code"
-    "qrbutton qr-code"
-    "params-qr-table params-qr-table"
+  grid-template-areas: 
+    "qrstring qrbutton qr-code"
+    "qrstring download-svg qr-code"
+    "qrstring download-png qr-code"
+    "params-qr-table params-qr-table params-qr-table"
   ;
   grid-template-columns:1fr 200px;
 }

@@ -62,11 +62,14 @@ const QR = ({ qrString }) => {
           viewBox={`0 0 1024 1024`}
         />
         <canvas id="canvas" style={{ display: 'none' }} width="1024" height="1024"></canvas>
-        <div style={{ display: 'flex', gap: '4px', paddingBlock: '12px' }}>
-          <button onClick={saveSvg}>Download SVG</button>
-          <button onClick={downloadToPNG}>Download PNG</button>
-        </div>
       </div>
+
+      <button style={{ gridArea: 'download-svg' }} onClick={saveSvg}>
+        Download SVG
+      </button>
+      <button style={{ gridArea: 'download-png' }} onClick={downloadToPNG}>
+        Download PNG
+      </button>
     </>
   );
 };

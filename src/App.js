@@ -4,9 +4,7 @@ import BharatQR from './BharatQR/BharatQR';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <BharatQR />
-      </header>
+      <BharatQR />
     </div>
   );
 }
